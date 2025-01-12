@@ -4,236 +4,170 @@
     <title>Harvard University</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-         * {
+           * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        body {
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
         header {
             display: flex;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: clamp(0.5rem, 2vw, 2rem);
             background-color: rgba(255, 253, 253, 0);
             box-shadow: 0 2px 4px rgba(59, 58, 58, 0);
         }
 
         header img {
-            width: 35px;
+            width: clamp(25px, 3vw, 35px);
             margin-right: 10px;
         }
 
         header h1 {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
             color: #030001;
-            font-style: normal;
         }
 
+        /* General Text Alignments */
         .center {
             text-align: center;
             width: 100%;
+            padding: clamp(1rem, 2vw, 2rem);
         }
 
         .left {
             text-align: left;
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
             max-width: 800px;
+            padding: clamp(1rem, 2vw, 2rem);
         }
 
         .right {
             text-align: right;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
         }
 
-        div h1, div p {
-            margin: 2rem auto;
-            padding: 1rem;
-            max-width: 800px;
-        }
-
-       
-        div h2,div p {
-            margin: 1.5rem;
-            padding: 0rem;
-            max-width: 1250px;
-        }
-
-        div h {
-            margin: 2rem;
-            padding: 0rem;
-            max-width: 820px;
-        }
-
-        /* New Resolutions Section Styles */
+        /* Resolutions Section */
         .resolutions-section {
             position: relative;
             text-align: center;
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 4vw, 4rem);
             background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+            background-image: url('https://media.istockphoto.com/id/1251528360/photo/blur-abstract-background-of-examination-room-with-undergraduate-students-inside-blurred-view.jpg?s=612x612&w=0&k=20&c=6pcI2hQkYU7b_ZmaYYY4F7vNI5o-h1vtLeyNMKxfL5E=');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .resolutions-section h1 {
             font-family: serif;
-            font-size: 5rem;
+            font-size: clamp(2.5rem, 6vw, 5rem);
             font-weight: normal;
             color: #000;
             margin-bottom: 2rem;
             line-height: 1.2;
         }
-        .resolutions-section {
-    position: relative;
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
-    background-image: url('https://media.istockphoto.com/id/1251528360/photo/blur-abstract-background-of-examination-room-with-undergraduate-students-inside-blurred-view.jpg?s=612x612&w=0&k=20&c=6pcI2hQkYU7b_ZmaYYY4F7vNI5o-h1vtLeyNMKxfL5E=');  /* Replace with your image URL */
-    background-size: cover;  /* Ensures the image covers the entire section */
-    background-position: center center;  /* Centers the image in the section */
-    background-attachment: fixed;  /* Keeps the image in place when scrolling */
-}
-
 
         .resolutions-section p {
-            font-size: 1.25rem;
-            line-height: 1.6;
-            color: #333;
+            font-size: clamp(1rem, 2vw, 1.25rem);
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .background-box {
-            flex: 1; /* Ensures each box takes equal width */
-            margin: 0 1rem; /* Adds spacing between the boxes */
-            height: 300px; /* CHANGED: Increased height to make boxes vertically rectangular */
-            background-color: #f5f5f500; /* Light gray background for visibility */
-            border: 1px solid #cccccc00; /* Border to define the box boundaries */
-            border-radius: 20px; /* Rounded corners */
-            padding: 1rem; /* Padding inside the boxes */
-            display: flex; /* Ensures proper content alignment */
-            flex-direction: column; /* Content is stacked vertically */
-            justify-content: space-between; /* Evenly distributes content vertically */
-            text-align: center; /* Centers text inside the boxes */
-            font-family: Arial, sans-serif; /* Font family */
-            font-size: 1rem; /* Standard text size */
-            color: #333; /* Text color */
-            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Adds subtle shadow effect */
-        }
-        .course1 {
-            background-image: url('https://www.shutterstock.com/image-photo/close-man-hand-typing-keyboard-600nw-2279001643.jpg'); /* Replace with your image URL */
-        }
-
-        .course2 {
-            background-image: url('https://media.istockphoto.com/id/1371197213/photo/faith-and-gratitude.jpg?s=612x612&w=0&k=20&c=ZXLEWghTAFcOoAUiDQohp_kjU6wPguSRMBLnRVYDGU8='); /* Replace with your image URL */
-        }
-
-        .course3 {
-            background-image: url('https://media.istockphoto.com/id/1162604507/photo/woman-cooking-marinated-cucumbers-with-garlic-and-dill-on-black-rustic-dark-style.jpg?s=612x612&w=0&k=20&c=kwxHMKnJfQcfJflfqB6wOtruNoCwRFiyhKrWk_7eC_Q='); /* Replace with your image URL */
-        }
-
-        .course4 {
-            background-image: url('https://pll.harvard.edu/sites/default/files/styles/16_9_medium/public/course/backyard-meteorology.jpg?itok=C-S-VWQK'); /* Replace with your image URL */
-        }
-
-        .course5 {
-            background-image: url('https://i.pinimg.com/736x/3b/9a/26/3b9a26cf7c2d3dd44383ee9513ffd1a8.jpg'); /* Replace with your image URL */
-        }
-
-        .course6 {
-            background-image: url('https://pll.harvard.edu/sites/default/files/styles/16_9_medium/public/course/asset-v1_HarvardX%2BUSW1920%2B3T2018%2Btype%40asset%2Bblock%40course_image.jpg?itok=dRp-Ilk-'); /* Replace with your image URL */
-        }
-
-        .background-box p {
-            margin: 0.5rem 0; /* Space between paragraphs */
-            color:white;
-        }
-
-
-        footer {
+        /* Container for Image and Text */
+        .container {
             display: flex;
-            justify-content: space-between;
-            padding: 2rem;
-            background-color: #222;
-            color: #fff;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: clamp(1rem, 3vw, 2rem);
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        footer .box {
-            width: 30%;
+        .image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
         }
 
-        .smaller-font {
-            font-size: 1rem;
+        .text {
+            flex: 1;
+            min-width: 300px;
         }
 
+        .text h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .text p {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+        }
+
+        /* Course and Book Grid Layout */
         .content-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: clamp(1rem, 2vw, 2rem);
+            padding: clamp(1rem, 2vw, 2rem);
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .content-column {
-            width: 20%;
-        }
-
-        .left-course, .center-course, .right-course {
-            text-align: center;
+        .background-box {
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
             padding: 1rem;
-            width: 30%;
-            height: 80%;
-        }
-
-        .center-course {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            color: white;
         }
 
-        .right-course {
-            text-align: center;
-        }
-
-        /* Mental health section styles */
+        /* Mental Health Section */
         .mental-health-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: clamp(2rem, 4vw, 4rem);
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
-            display: flex;
-            gap: 2rem;
-        }
-
-        .mental-health-left {
-            flex: 1;
-        }
-
-        .mental-health-right {
-            flex: 1;
+            padding: clamp(1rem, 3vw, 2rem);
         }
 
         .mental-health-title {
             font-family: serif;
-            font-size: 3rem;
-            font-weight: normal;
-            color: #333;
+            font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 1.5rem;
-            line-height: 1.2;
         }
 
         .mental-health-subtitle {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
             line-height: 1.6;
-            color: #484848;
             margin-bottom: 1.5rem;
         }
 
         .mental-health-link {
             display: inline-flex;
             align-items: center;
+            gap: 0.5rem;
             color: #666;
             text-decoration: none;
-            font-size: 1.1rem;
-            gap: 0.5rem;
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
             margin-bottom: 1.5rem;
         }
 
         .mindfulness-title {
-            font-size: 1.75rem;
-            color: #333;
+            font-size: clamp(1.5rem, 2.5vw, 1.75rem);
             margin-bottom: 2rem;
         }
 
@@ -243,104 +177,110 @@
 
         .step-number {
             font-family: serif;
-            font-size: 1.75rem;
+            font-size: clamp(1.5rem, 2vw, 1.75rem);
             color: #9c2427;
             margin-bottom: 0.5rem;
-            font-weight: normal;
         }
 
         .step-text {
-            font-size: 1.1rem;
-            color: #484848;
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
             line-height: 1.6;
-            margin: 0;
         }
 
         .ocean-image {
             width: 100%;
             height: auto;
             margin-top: 1.5rem;
-            border-radius: 0px;
-        }
-        .center h3 {
-            font-size: 2rem;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .content-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 2rem;
         }
 
-        .book-box {
-            flex: 1;
-            margin: 0 1rem;
-            height: 300px; /* Tall height */
-            background-color: #f5f5f500;
-            border: 1px solid #cccccc00;
+        /* Course and Book Boxes */
+        .course-box, .book-box {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            font-size: 1rem;
-            color: #333;
-            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-            
-        }
-        .content-column p {
-            margin: 0.5rem 0; /* Space between paragraphs */
-            color:white;
-        }
-        .book1 {
-            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/051/314/922/small/vintage-books-with-dark-leather-binding-and-patterns-on-isolated-background-stock-footage-old-book-with-simple-gilded-patterns-on-cover-photo.jpg'); /* Replace with your image URL */
         }
 
-        .book2 {
-            background-image: url('https://i.pinimg.com/236x/f9/7f/b8/f97fb8f7b94cdb149a9ea2bc45719f35.jpg'); /* Replace with your image URL */
+        /* Footer */
+        footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: clamp(1.5rem, 3vw, 2rem);
+            background-color: #222;
+            color: #fff;
         }
 
-        .book3 {
-            background-image: url('https://img.freepik.com/premium-vector/abstract-chemistry-pattern-dark-blue-background-with-chemical-formulas-molecular-structures-science-innovation-technology-concept_120542-448.jpg'); /* Replace with your image URL */
+        footer .box {
+            padding: 1rem;
         }
 
-        .book4 {
-            background-image: url('https://st5.depositphotos.com/90090170/75052/i/450/depositphotos_750529134-stock-photo-dark-blue-tech-background.jpg'); /* Replace with your image URL */
+        footer .box p {
+            margin-bottom: 1rem;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
         }
 
-        .book5 {
-            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZoGzytO4fYfh7ArgiVyCSP0VSs6-GTRh_Mg&s'); /* Replace with your image URL */
+        /* Course Backgrounds */
+        .course1 { background-image: url('https://www.shutterstock.com/image-photo/close-man-hand-typing-keyboard-600nw-2279001643.jpg'); }
+        .course2 { background-image: url('https://media.istockphoto.com/id/1371197213/photo/faith-and-gratitude.jpg?s=612x612&w=0&k=20&c=ZXLEWghTAFcOoAUiDQohp_kjU6wPguSRMBLnRVYDGU8='); }
+        .course3 { background-image: url('https://media.istockphoto.com/id/1162604507/photo/woman-cooking-marinated-cucumbers-with-garlic-and-dill-on-black-rustic-dark-style.jpg?s=612x612&w=0&k=20&c=kwxHMKnJfQcfJflfqB6wOtruNoCwRFiyhKrWk_7eC_Q='); }
+        .course4 { background-image: url('https://pll.harvard.edu/sites/default/files/styles/16_9_medium/public/course/backyard-meteorology.jpg?itok=C-S-VWQK'); }
+        .course5 { background-image: url('https://i.pinimg.com/736x/3b/9a/26/3b9a26cf7c2d3dd44383ee9513ffd1a8.jpg'); }
+        .course6 { background-image: url('https://pll.harvard.edu/sites/default/files/styles/16_9_medium/public/course/asset-v1_HarvardX%2BUSW1920%2B3T2018%2Btype%40asset%2Bblock%40course_image.jpg?itok=dRp-Ilk-'); }
+
+        /* Book Backgrounds */
+        .book1 { background-image: url('https://static.vecteezy.com/system/resources/thumbnails/051/314/922/small/vintage-books-with-dark-leather-binding-and-patterns-on-isolated-background-stock-footage-old-book-with-simple-gilded-patterns-on-cover-photo.jpg'); }
+        .book2 { background-image: url('https://i.pinimg.com/236x/f9/7f/b8/f97fb8f7b94cdb149a9ea2bc45719f35.jpg'); }
+        .book3 { background-image: url('https://img.freepik.com/premium-vector/abstract-chemistry-pattern-dark-blue-background-with-chemical-formulas-molecular-structures-science-innovation-technology-concept_120542-448.jpg'); }
+        .book4 { background-image: url('https://st5.depositphotos.com/90090170/75052/i/450/depositphotos_750529134-stock-photo-dark-blue-tech-background.jpg'); }
+        .book5 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZoGzytO4fYfh7ArgiVyCSP0VSs6-GTRh_Mg&s'); }
+        .book6 { background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220312/pngtree-notebook-computer-electronic-equipment-science-and-technology-particles-image_1062240.jpg'); }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text {
+                margin: 0;
+                text-align: center;
+            }
+
+            .left {
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .mental-health-section {
+                text-align: center;
+            }
+
+            footer .box {
+                text-align: center;
+            }
+
+            .course-box, .book-box {
+                height: 250px;
+            }
         }
 
-        .book6 {
-            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220312/pngtree-notebook-computer-electronic-equipment-science-and-technology-particles-image_1062240.jpg'); /* Replace with your image URL */
-        }
-        .container {
-  display: flex;
-  align-items: center;
-}
-
-.image {
-  width: 500px;  /* Adjust image size as needed */
-  height: auto;
-}
-
-.text h2{
-  margin-left: 50px;  /* Space between image and text */
-  font-size:2.5rem;
-}
-.text p{
-  margin-left: 50px;  /* Space between image and text */
-  font-size:1.5rem;
-}
-         @media (max-width: 480px) {
+        @media (max-width: 480px) {
             header {
                 justify-content: center;
+                text-align: center;
+            }
+
+            .background-box {
+                height: 250px;
+            }
+
+            .course-box, .book-box {
+                height: 200px;
+            }
+
+            .step {
                 text-align: center;
             }
         }
